@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TypeMe</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <%= javascript_include_tag 'application' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascripts/home_scroller.js"></script>
+  <link rel="stylesheet" href="/stylesheets/swiper.min.css">
+  <link rel="stylesheet" href="/stylesheets/swiper_config.css">
+  <%= csrf_meta_tags %>
+  <%= render :partial => 'layouts/ios_fullscreen_web_app_config' %>
+</head>
+<div class="content">
+<body class="welcome-body">
+  <div class="container-fluid welcome-container-fluid">
+
+    <div id="background-img">
+
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="front-page">
+              <a href="/users/auth/facebook">
+                <img src="https://placehold.it/80" class="logo">
+              </a>
+              <h1 id="home-title">TypeMe</h1>
+              <h4 class="home-subtitle">Find your next match <br>based on your last swipe</h4>
+            </div>
+          </div>
+          <div class="swiper-slide walkthrough-slide"><img class="walkthrough" src="assets/doubles-1.png"></div>
+          <div class="swiper-slide walkthrough-slide"><img class="walkthrough" src="assets/doubles-2.png"></div>
+          <div class="swiper-slide walkthrough-slide"><img class="walkthrough" src="assets/doubles-3.png"></div>
+          <div class="swiper-slide walkthrough-slide"><img class="walkthrough" src="assets/doubles-4.png"></div>
+          <div class="swiper-slide walkthrough-slide"><img class="walkthrough" src="assets/doubles-5.png"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+
+      </div>
+
+      <!-- Swiper JS -->
+      <script src="/javascripts/swiper.min.js"></script>
+      <!-- Initialize Swiper -->
+      <script src="/javascripts/swiper_config.js"></script>
+
+    </div>
+
+    <div class="home-bottom-div-10 fixed-zindex-to-top">
+      <%= link_to "Start Swiping", user_omniauth_authorize_path(:facebook), :class=>"col-xs-12 home-footer-cta start-btn" %>
+    </div>
+  </div>
+</div>
+<div class="spacer"></div>
+</body>

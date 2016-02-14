@@ -47,6 +47,7 @@ def lat_lng_by_zipcode
   end
 end
 
+
 def matches
   self.first_user_matches + self.second_user_matches
 end
@@ -55,7 +56,7 @@ end
 def narrow_users
   users_nearby = self.users_within_radius
   unswiped_users_nearby = unswiped_users(users_nearby)
-  unswiped_users_nearby
+  exclude_rejections(unswiped_users_nearby)
 end
 
 def users_within_radius
@@ -66,6 +67,10 @@ end
 
 def unswiped_users(user_objects)
   user_objects.select{|user|self.swipees.exclude?(user)}
+end
+
+def exclude_rejections(unswiped_users)
+  unswiped_users - Swipe.where(swipee_id: self.id, swiped_yes: false).map {|swipe| swipe.swiper}
 end
 
 def self.from_omniauth(auth)

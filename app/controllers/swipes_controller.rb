@@ -12,14 +12,14 @@ class SwipesController < ApplicationController
     end
 
     def feed
-      @next_five_users = current_user.narrow_users[0..4] if current_user
+      @next_five_users = current_user.narrow_users[0..0] if current_user
       if request.xhr?
         if @next_five_users.empty?
           render :text => "<h3 class='text-center'>No more swipes for now. Please check back soon!</h3>"
         else
           # send back all the rendered cards and their count to the ajax call as json
           {num_cards: @next_five_users.length,
-          cards: (render :partial => 'swipes/generate_cards', :locals => {:users => @next_five_users })
+          cards: (render :partial => 'swipes/generate_cards', :locals => {:users => @next_five_users, current_user.narrow_users.map {|user| user.face_id} => @all_face_ids })
           }.to_json
         end
 

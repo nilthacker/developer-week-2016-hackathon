@@ -14,6 +14,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :profile_picture_url, null: false
       t.string :access_token
       t.string :username
+      t.string :face_id
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""

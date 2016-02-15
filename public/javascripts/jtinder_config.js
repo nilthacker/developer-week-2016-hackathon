@@ -5,12 +5,29 @@ $(document).ready(function(){
 var totalSwipes = 0;
 var totalCards = $('#cards ul li').length;
 
+function findSimilarFaces(faceID) {
+  var requestBody =
+  JSON.stringify({"faceId":faceID,
+  "faceIds": faceIdsToCompare})
+
+  $.ajax({
+    url: 'https://api.projectoxford.ai/face/v1.0/findsimilars',
+    type: "POST",
+    contentType: "application/json",
+    headers: {"Ocp-Apim-Subscription-Key": "bbbe4160490740c3b3cb57aa7b75fec4"},
+    data: requestBody,
+    success: function(response) {
+    }
+  });
+};
+
 function checkForMore() {
   if (totalSwipes == totalCards) {
     $.ajax({
       url: '/feed',
       type: 'GET',
       success: function(data) {
+        console.log(data);
         $('#cards').hide();
         $('#cards ul').append(data);
         initJTinder();

@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20160131215714) do
     t.string   "profile_picture_url",                                         null: false
     t.string   "access_token"
     t.string   "username"
+    t.string   "face_id"
     t.string   "email",                                          default: "", null: false
     t.string   "encrypted_password"
     t.string   "reset_password_token"

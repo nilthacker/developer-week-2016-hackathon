@@ -7,9 +7,9 @@ Match smarter, happier, safer, with TypeMe.
 
 #### APIs used:
 
-* Microsoft Cortana Text Analytics API: https://gallery.cortanaanalytics.com/MachineLearningAPI/Text-Analytics-2?share=1
-* Microsoft Cortana Face API: https://gallery.cortanaanalytics.com/MachineLearningAPI/b0b2598aa46c4f44a08af8891e415cc7
-* Flowroute SIP calling: https://www.flowroute.com/voice/
+* [Microsoft Cortana Analytics Text API](https://gallery.cortanaanalytics.com/MachineLearningAPI/Text-Analytics-2?share=1)
+* [Microsoft Cortana Analytics Face API](https://gallery.cortanaanalytics.com/MachineLearningAPI/b0b2598aa46c4f44a08af8891e415cc7)
+* [Flowroute SIP](https://www.flowroute.com/voice/) calling (beta access for number masking)
 
 #### Awards:
 

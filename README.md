@@ -3,6 +3,8 @@ Swipe right with confidence with TypeMe. TypeMe uses machine learning to optimiz
 
 Match smarter, happier, safer, with TypeMe.
 
+[TypeMe submission on Accelerate.im](http://accelerate.im/projects/413)
+
 #### APIs used:
 
 * Microsoft Cortana Text Analytics API: https://gallery.cortanaanalytics.com/MachineLearningAPI/Text-Analytics-2?share=1
@@ -11,5 +13,5 @@ Match smarter, happier, safer, with TypeMe.
 
 #### Awards:
 
-* Winner of the Microsoft "Develop your Smart App with Perceptual Intelligence APIs" challenge.
-* Winner of the Flowroute "Most innovative Number Masking Use Case" challenge.
+* Winner of the Microsoft "[Develop your Smart App with Perceptual Intelligence APIs](http://accelerate.im/challenges/65)" challenge.
+* Winner of the Flowroute "[Most innovative Number Masking Use Case](http://accelerate.im/challenges/65)" challenge.
